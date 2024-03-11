@@ -1,0 +1,13 @@
+.user-icon {
+    width: 70%;
+
+}
+
+.btn-user {
+    width: 10% !important;
+}
+
+td, th {
+    border: 1px solid rgb(66, 66, 66) !important; /* Параметры границы */
+    padding: 4px  !important; /* Поля в ячейках */
+}

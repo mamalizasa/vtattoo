@@ -1,0 +1,607 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+.logoblock {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.container-menu {
+    width: 100%;
+    border-bottom: 1px solid #FFAC4A;
+}
+.spimen {
+    list-style-type: none;
+    padding-left: 5%;
+    padding-top: 2%;
+}
+.lipunkt {
+    font-family: 'Montserrat', sans-serif;
+}
+.ssulka-menu {
+    text-decoration: none;
+    color: #FFAC4A;
+    border-bottom: 1px solid #FFAC4A;
+    padding-bottom: 0.2em;
+    font-size: 24px;
+}
+.ssulka-menu:hover {
+    text-decoration: none;
+    color: #FFFAF2;
+    border-bottom: 1px solid #FFAC4A;
+    padding-bottom: 0.2em;
+}
+
+/* Burger */
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0D0902;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 50px;
+    padding: 1em;
+}
+  
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+  
+.menu > li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+  
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+#menu-toggle {
+    display: none;
+}
+  
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+  
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+  
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+  
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+  
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+  
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+  
+@media (max-width: 700px) {
+    .menu-button-container {
+      display: flex;
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      margin-top: 80px;
+      left: 0;
+      flex-direction: column;
+      width: 99%;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    #menu-toggle ~ .menu li {
+      height: 0;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    #menu-toggle:checked ~ .menu li {
+      border: 1px solid #333;
+      height: 2.5em;
+      padding: 0.5em;
+      transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    .menu > li {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0.5em 0;
+      width: 100%;
+      color: white;
+      background-color: #0D0902;
+    }
+    .menu > li:not(:last-child) {
+      border-bottom: 1px solid #444;
+    }
+}
+
+/* Burger off */
+
+/* Header off */
+
+.container-gl {
+    width: 100%;
+    height: 35em;
+    background: url('../assets/img/background_back.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.edin {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 250%;
+    color: #FFFAF2;
+    padding-top: 10%;
+    margin-left: 7%;
+}
+.edin0 {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 250%;
+    color: #FFAC4A;
+    margin-top: 4%;
+    margin-left: 7%;
+    z-index: -1;
+}
+
+.knopa {
+    margin-top: 5%;
+    margin-left: 7%;
+    background-color: #FFFAF2;
+    border-radius: 15px;
+    border: 0px solid;
+    width: 300px;
+    height: 92px;
+}
+.knopa:hover {
+    background-color: #FFAC4A;
+}
+.knopa:hover a {
+    color:#FFFAF2;
+}
+
+
+.knopa-ssul {
+    text-decoration: none;
+    color: #0D0902;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 28px;
+}
+
+
+.icons {
+    outline: none;
+    background: transparent;
+}
+h1 {
+    color:#FFAC4A;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    font-size: 220%;
+}
+/* Подробнее */
+.container-podrob {
+    width: 100%;
+    min-height: 45em;
+    background-color: #0D0902;
+}
+
+.andrew {
+    padding: 1.5%;
+    height: 2%;
+    border-radius: 15px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 45%;
+    background-color: #FFAC4A;
+    color: #0D0902;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 220%;
+    text-align: center;
+    display: block;
+    width: 30%;
+}
+
+.pica1 {
+    padding: 5%;
+    padding-right: 10%;
+    padding-top: 0;
+    width: auto;
+    float: left;
+}
+
+.profi {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 28px;
+    color:#FFFAF2;
+}
+
+/* Подробнее всё */
+
+
+/*Появление элемента*/
+.element-animation {
+    /* Скроем элемент в начальном состоянии */
+    opacity: 0;
+    transform: translateY(20px);
+}
+.element-animation.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+    z-index: -100000000000;
+}
+.h1 {
+    color:#0D0902;
+}
+
+.container-zaslug {
+    width: 100%;
+    height: 460px;
+    background-color: #FFAC4A;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex-basis: calc(33.33%);
+}
+
+@media (max-width: 768px) {
+    .column {
+      flex-basis: 100%;
+    }
+}
+
+.car {
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+}
+
+
+
+.zasll {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color:#0D0902;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.container-video {
+    width: 100%;
+    height: 47em;
+    background-color: #0D0902;
+}
+
+#h1 {
+    color: #FFFAF2;
+}
+.vidivo {
+    width: 70%;
+    height: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-aboutus {
+    width: 100%;
+    background-color: #FFFAF2;
+    background: url('../assets/img/montain.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.usp {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    width: 90%;
+    font-size: 28px;  
+    color:#0D0902;
+    line-height: 1.8em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: 65px;
+}
+.uspp {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    width: 90%;
+    font-size: 28px;  
+    color:#0D0902;
+    line-height: 1.8em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: 65px;
+    padding-bottom: 4%;
+}
+
+.spius {
+    padding-left: 12%;
+}
+
+.krasus {
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 28px;
+    color:#0D0902;
+    line-height: 1.6em;
+}
+
+/* Подвал*/
+footer {
+    background-color: #FFAC4A;
+    padding: 20px 0;
+    text-align: center;
+}
+/* Стили для лого */
+.logof {
+    width: 22%;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+    margin: 0 auto;
+}
+/* Стили для меню */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color:#0D0902;
+}
+/* Стили для адреса */
+.address {
+    margin-top: 20px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 20px;
+    color:#0D0902;
+}
+/* Стили для ссылок на социальные сети */
+.social-links {
+    margin-top: 20px;
+}
+.social-links a {
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+}
+/* Стили для карты */
+.map {
+    margin-top: 20px;
+}
+.pf {
+    text-align: center;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    font-size: 14px;
+    color:#0D0902;
+    padding-top: 2%;
+}
+/* Адаптивные стили */
+@media only screen and (max-width: 768px) {
+    /* Стили для меню */
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .logof {
+        text-align: center;
+    }
+}
+
+
+.btn-top {
+    /* фиксированное позиционирование */
+    position: fixed;
+    /* цвет фона */
+    background-color: #FFFAF2;
+    /* расстояние от правого края окна браузера */
+    right: 40px;
+    /* расстояние от нижнего края окна браузера */
+    bottom: 0;
+    /* скругление верхнего левого угла */
+    border-top-left-radius: 8px;
+    /* скругление верхнего правого угла */
+    border-top-right-radius: 8px;
+    /* вид курсора */
+    cursor: pointer;
+    /* отображение элемента как flex */
+    display: flex;
+    /* выравниваем элементы внутри элемента по центру вдоль поперечной оси */
+    align-items: center;
+    /* выравниваем элементы внутри элемента по центру вдоль главной оси */
+    justify-content: center;
+    /* ширина элемента */
+    width: 60px;
+    /* высота элемента */
+    height: 50px;
+}
+  
+.btn-up::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 17V4M3 10l7-7 7 7'/%3E%3C/g%3E%3C/svg%3E");
+}
+  
+.btn-up_hide {
+    display: none;
+}
+
+
+
+@media (max-width: 921px) {
+    .andrew {
+        width: 40%;
+    }
+}
+
+@media (max-width: 560px) {
+    .container-zaslug {
+        height: 700px;
+        padding-bottom: 50%;
+    }
+    .container-video {
+        height: 32em;
+    }
+    .container-aboutus {
+        font-size: 14px;
+    }
+    .usp {
+        font-size: 14px;
+    }
+    .uspp {
+        font-size: 14px;
+    }
+    .krasus {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 745px) {
+    .pica1 {
+        width: 78%;
+    }
+    .container-podrob {
+        height: 145em;
+        padding-bottom: 50%;
+    }
+    .profi {
+        padding-top: 7%;
+        text-align: center;
+    }
+    .andrew{
+        width: 60%;
+        margin: 0 auto;
+        display: block;
+        margin-top: 10%;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+    .btn-po {
+        opacity: 0 !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .pica1 {
+        width: 80%;
+    }
+    .container-podrob {
+        height: 145em;
+        padding-bottom: 50%;
+    }
+    .profi {
+        text-align: center;
+    }
+    .andrew{
+        width: 60%;
+        margin: 0 auto;
+        display: block;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+    .btn-po {
+        opacity: 0 !important;
+    }
+}
+  
+@media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+      background-color: #FFFAF2; /* цвет заднего фона при наведении */
+    }
+}
+
+
+@media (max-width: 820px) {
+
+    .btn-po {
+        display: none;
+    }
+
+    .container-podrob {
+        height: 38em;
+    }
+
+
+    .container-zaslug {
+        height: 24em;
+    }
+    .container-video {
+        height: 40em;
+    }
+    .vidivo {
+        width: 90%;
+    }
+
+}
